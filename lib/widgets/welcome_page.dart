@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:quizzapp/constants.dart';
 import 'package:quizzapp/widgets/test_page.dart';
 import 'package:websafe_svg/websafe_svg.dart';
@@ -45,12 +46,7 @@ class WelcomePage extends StatelessWidget {
                   ),
                   Spacer(),
                   InkWell(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          new MaterialPageRoute(
-                              builder: (context) => TestPage()));
-                    },
+                    onTap: () => Get.to(TestPage()),
                     child: Container(
                       width: double.infinity,
                       alignment: Alignment.center,

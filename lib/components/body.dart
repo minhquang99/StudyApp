@@ -31,15 +31,15 @@ class Body extends StatelessWidget {
               SizedBox(
                 height: kDefaultPadding,
               ),
-              Text.rich(TextSpan(
-                  text: 'Question 1',
-                  style: TextStyle(fontSize: 27, color: Colors.white),
-                  children: [
-                    TextSpan(
-                      text: '/10',
-                      style: TextStyle(fontSize: 20, color: Colors.white),
-                    )
-                  ])),
+              Obx(() => Text.rich(TextSpan(
+                      text: "Question ${_questionController.questionNum.value}",
+                      style: TextStyle(fontSize: 27, color: Colors.white),
+                      children: [
+                        TextSpan(
+                          text: '/${_questionController.questions.length}',
+                          style: TextStyle(fontSize: 20, color: Colors.white),
+                        )
+                      ]))),
               Divider(
                 thickness: 2,
               ),
@@ -50,6 +50,7 @@ class Body extends StatelessWidget {
                 child: PageView.builder(
                     physics: NeverScrollableScrollPhysics(),
                     controller: _questionController.pageController,
+                    onPageChanged: _questionController.updateQsNum,
                     itemCount: _questionController.questions.length,
                     itemBuilder: (context, index) => QuestionCard(
                           question: _questionController.questions[index],

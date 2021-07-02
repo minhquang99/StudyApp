@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/state_manager.dart';
 import 'package:quizzapp/models/question.dart';
+import 'package:quizzapp/widgets/result_screen.dart';
 
 class QuestionController extends GetxController
     with SingleGetTickerProviderMixin {
@@ -71,11 +72,11 @@ class QuestionController extends GetxController
     if (_correctAns == selectIndex) {
       _numOfCorrectAns++;
     }
-
+    _animationController.stop();
     update();
 
     //khi user check dap an, 3s sau chuyen trang
-    Future.delayed(Duration(seconds: 2), () {
+    Future.delayed(Duration(seconds: 1), () {
       nextQuestion();
     });
   }
@@ -88,7 +89,9 @@ class QuestionController extends GetxController
 
       _animationController.reset();
       _animationController.forward().whenComplete(nextQuestion);
-    } else {}
+    } else {
+      Get.to(ResultScreen());
+    }
   }
 
   void updateQsNum(int index) {
