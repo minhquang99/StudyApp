@@ -1,16 +1,10 @@
-# quizzapp
+# StudyApp
 
-A new Flutter project.
+A Flutter project.
 
-## Getting Started
+![rsz_2screenshot_1625232810](https://user-images.githubusercontent.com/45615713/124284203-f4865400-db76-11eb-89a6-901776cfd248.png)  ![rsz_1screenshot_1625232822](https://user-images.githubusercontent.com/45615713/124283765-76c24880-db76-11eb-8f24-10bf3b85f897.png)   ![rsz_screenshot_1625232851](https://user-images.githubusercontent.com/45615713/124283451-1c28ec80-db76-11eb-8021-70f668ac8f40.png)   ![rsz_2screenshot_1625232810](https://user-images.githubusercontent.com/45615713/124284203-f4865400-db76-11eb-89a6-901776cfd248.png)
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
